@@ -1,0 +1,225 @@
+/* v2.5 排版精修：沿用IP品牌与商城参考风格，不改变数据和交互。 */
+:root {
+  --body: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  --display: var(--body);
+  --ink: #191919;
+  --paper: #f5f5f5;
+  --muted: #646464;
+  --line: #e6e6e6;
+  --orange: #ff6900;
+  --orange-dark: #a74100;
+  --orange-soft: #fff3e9;
+  --radius: 12px;
+  --shadow: 0 4px 18px #00000005;
+  --page-gutter: clamp(20px, 3.3vw, 48px);
+}
+html { scroll-padding-top: 156px; }
+body { font-family: var(--body); font-size: 17px; line-height: 1.7; background: var(--paper); color: var(--ink); }
+button, input, select, textarea { font-family: inherit; }
+h1, h2, h3 { letter-spacing: -.025em; }
+p { text-wrap: pretty; }
+button { transition: background-color 160ms ease, color 160ms ease, box-shadow 160ms ease; }
+button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: 2px solid #a74100; outline-offset: 4px;
+}
+::selection { background: #ff69002b; }
+/* 两条导航共用同一左边线，工具区保留稳定触控尺寸。 */
+.site-announcement { min-height: 32px; padding: 6px 20px; font-size: 13px; gap: 20px; }
+body:not([data-view="home"]) .site-announcement { display: none; }
+.store-header-inner { max-width: 1440px; min-height: 76px; padding: 12px var(--page-gutter); gap: 28px; }
+.store-header .brand { gap: 10px; }
+.store-header .brand strong { font-size: 18px; line-height: 1.45; }
+.store-header .brand small { font-size: 10px; line-height: 1.8; letter-spacing: 1.8px; }
+.store-header .brand img { width: 40px; height: 40px; }
+.store-header .nav-item { padding: 10px 16px; font-size: 16px; min-height: 44px; font-weight: 500; }
+.store-header .nav-item.active { font-weight: 650; }
+.store-account-tools { gap: 12px; }
+.store-header .search-button, .store-account-tools .icon-button, .store-account-tools .mobile-menu { min-width: 40px; min-height: 40px; display: inline-flex; justify-content: center; align-items: center; border-radius: 8px; }
+.store-header .search-button:hover, .store-account-tools .icon-button:hover, .store-account-tools .mobile-menu:hover { background: #f4f4f4; }
+.store-account-tools .mobile-menu { display: none; }
+.store-header .project-switch { min-height: 44px; }
+.store-header .project-switch strong { font-size: 14px; }
+.store-header .project-switch small { font-size: 12px; }
+.store-header .project-switch .avatar { width: 32px; height: 32px; }
+.store-header .store-work-nav { max-width: 1440px; padding: 0 var(--page-gutter); gap: 20px; min-height: 48px; }
+.store-header .store-work-nav .nav-item { font-size: 15px; padding: 11px 4px; }
+.topbar { max-width: 1344px; min-height: 54px; padding: 14px var(--page-gutter); }
+.breadcrumbs, .breadcrumbs strong { font-size: 14px; font-weight: 400; color: #666; }
+.breadcrumbs strong { color: #222; }
+.preview-label { font-size: 13px; color: #646464; white-space: nowrap; }
+.preview-label i { width: 6px; height: 6px; }
+.workspace { max-width: 1344px; padding: 20px var(--page-gutter) 64px; }
+/* 标题与说明建立一致等级，不把所有文字都加粗放大。 */
+.page-heading { margin: 0 0 28px; gap: 24px; align-items: center; }
+.page-heading .eyebrow { font-size: 13px; line-height: 1.6; letter-spacing: .08em; font-weight: 500; color: #666; }
+.page-heading h1 { font-size: clamp(30px, 2.6vw, 40px); line-height: 1.3; font-weight: 650; margin-top: 8px; color: #191919; }
+.page-heading p { font-size: 17px; line-height: 1.75; margin-top: 12px; max-width: 760px; color: #646464; }
+.page-heading > button { flex-shrink: 0; }
+.section-header { gap: 12px; align-items: center; }
+.section-header h2 { font-size: 28px; line-height: 1.35; font-weight: 650; }
+.section-header p { font-size: 16px; color: #646464; }
+.panel, .canvas-card, .topic-card, .library-card, .metric-card, .council-main, .roster, .script-paper {
+  border: 1px solid #eaeaea; border-radius: 12px; background: #fff; box-shadow: var(--shadow); min-width: 0;
+}
+.panel h2 { font-size: 23px; line-height: 1.45; font-weight: 600; }
+.panel > p, .side-panel p, .canvas-card p, .topic-card p, .library-card p { font-size: 16px; line-height: 1.8; color: #646464; }
+.primary, .page-heading .primary, .dialog-actions .primary { background: #191919; border: 1px solid #191919; color: #fff; font-size: 16px; font-weight: 550; padding: 11px 20px; min-height: 46px; border-radius: 8px; }
+.primary:hover { background: #333; border-color: #333; color: #fff; }
+.secondary, .page-heading .secondary, .dialog-actions .secondary { background: #fff; color: #414141; border: 1px solid #d6d6d6; font-size: 15px; font-weight: 500; padding: 11px 18px; min-height: 46px; border-radius: 8px; }
+.secondary:hover { background: #f6f6f6; border-color: #aaa; color: #191919; }
+.pill, .task-row .pill { font-size: 13px; font-weight: 500; padding: 4px 9px; line-height: 1.55; }
+.pill.orange { color: #a74100; background: #fff3e9; }
+.text-input, .feedback-area, .profile-form .feedback-area, .council-form textarea, select, .ai-controls select {
+  background: #fafafa; border: 1px solid #d9d9d9; font-size: 17px; line-height: 1.7; border-radius: 8px; color: #282828;
+}
+textarea::placeholder, input::placeholder { color: #707070; font-weight: 400; opacity: 1; }
+.feedback-area::placeholder, .prompt-box textarea::placeholder, .council-form textarea::placeholder { color: #707070; opacity: 1; }
+.input-label, .profile-form .input-label, .council-form label, .ai-controls label { font-size: 15px; font-weight: 550; color: #3b3b3b; }
+.field-list dt { font-size: 14px; font-weight: 500; color: #646464; }
+.field-list dd { font-size: 17px; line-height: 1.75; color: #292929; }
+/* 对话作为主工作区，待确认档案是辅助信息；减少首轮聊天的空白。 */
+.reception-layout { grid-template-columns: minmax(0, 1fr) minmax(310px, .56fr); gap: 24px; align-items: start; }
+.reception-chat, .reception-brief { padding: 28px; margin-top: 0; }
+.reception-chat-title { padding-bottom: 18px; gap: 12px; }
+.reception-chat-title h2 { font-size: 22px; line-height: 1.4; margin: 0; font-weight: 600; }
+.reception-chat-title p { font-size: 15px; line-height: 1.65; margin-top: 4px; color: #646464; }
+.reception-chat-title .avatar { width: 40px; height: 40px; font-size: 22px; border-radius: 11px; background: #fff3e9; color: #a74100; }
+.reception-messages { gap: 18px; padding: 18px 2px 18px 0; max-height: clamp(260px, 37vh, 420px); scrollbar-width: thin; scrollbar-color: #d5d5d5 transparent; }
+.chat-message { max-width: 94%; }
+.chat-message > span { font-size: 13px; color: #646464; margin: 0 0 6px 2px; }
+.chat-message p { padding: 14px 16px; font-size: 18px; line-height: 1.75; border-radius: 3px 12px 12px 12px; background: #f5f5f5; color: #282828; }
+.chat-message.user p { background: #fff3e9; color: #58361e; border-radius: 12px 3px 12px 12px; }
+.reception-chat form { padding-top: 18px; }
+.reception-chat textarea { margin-top: 8px; min-height: 104px; padding: 13px 15px; font-size: 18px; line-height: 1.7; }
+.reception-actions { gap: 10px; margin-top: 14px; align-items: center; }
+.reception-actions .primary, .reception-actions .secondary { font-size: 15px; min-height: 44px; }
+.reception-privacy { font-size: 14px; line-height: 1.75; color: #646464; margin-top: 18px; }
+.reception-brief { position: sticky; top: 148px; }
+.reception-brief .section-header { margin-bottom: 12px; flex-wrap: wrap; }
+.reception-brief h2 { font-size: 22px; margin: 0; }
+.reception-brief > p { font-size: 15px; line-height: 1.75; }
+.reception-brief .field-list { gap: 18px; margin: 22px 0; max-height: min(50vh, 500px); }
+.reception-brief .field-list > div { border-color: #ececec; padding-bottom: 14px; }
+.reception-brief .field-list dd { line-height: 1.75; margin-top: 6px; }
+.evidence-quote { font-size: 14px; color: #646464; line-height: 1.75; margin-top: 8px; }
+.brief-empty { margin: 20px 0; padding: 24px 20px; background: #f8f8f8; border: 1px dashed #ddd; border-radius: 8px; }
+.brief-empty > span { font-size: 17px; font-weight: 550; color: #333; }
+.brief-empty p { font-size: 15px; line-height: 1.8; color: #646464; margin-top: 8px; }
+.reception-review { padding: 32px; margin-top: 24px; scroll-margin-top: 148px; }
+.reception-review h2 { font-size: 28px; line-height: 1.4; margin: 10px 0; }
+.reception-fields { gap: 24px; margin-top: 24px; }
+.reception-fields .input-label { font-size: 15px; margin: 0; }
+.reception-fields .feedback-area, .reception-fields select { font-size: 17px; margin-top: 8px; }
+/* 首页保留陈列节奏；卡片文字不随宽度被缩成小字。 */
+.store-hero h1 { font-size: clamp(38px, 3.5vw, 54px); font-weight: 650; line-height: 1.22; }
+.store-hero-copy > p { font-size: 19px; line-height: 1.8; }
+.hero-facts span, .store-promo .eyebrow, .category-entry small { font-size: 14px; }
+.store-advisor.advisor-card { border: 1px solid #eaeaea; border-radius: 12px; padding: 24px; }
+.store-advisor h3 { font-size: 22px; line-height: 1.45; }
+.store-advisor > p, .store-promo p { font-size: 16px; color: #646464; line-height: 1.8; }
+.store-advisor .advisor-bottom { font-size: 14px; }
+.store-promos { gap: 24px; }
+.store-promo { border-radius: 12px; }
+.mini-advisor > strong { font-size: 13px; }
+.markdown-body { max-width: 100%; line-height: 1.85; }
+.markdown-body p { font-size: 17px !important; line-height: 1.85 !important; }
+.markdown-body li { font-size: 17px; line-height: 1.85; }
+.markdown-body table { display: block; overflow-x: auto; }
+.store-footer { margin-top: 8px; padding-top: 36px; padding-bottom: 36px; }
+.store-footer > div:last-child { font-size: 14px; line-height: 1.8; }
+/* 小于1100px无需塞满两排长标签。保留主要四入口，其他由现有菜单展开。 */
+@media (max-width: 1100px) {
+  html { scroll-padding-top: 136px; }
+  .store-header-inner { flex-wrap: wrap; gap: 8px 16px; padding: 10px var(--page-gutter) 0; min-height: 0; }
+  .store-header .brand { margin-right: auto; }
+  .store-header .brand strong { font-size: 17px; }
+  .store-header .brand img { width: 36px; height: 36px; }
+  .store-account-tools { gap: 6px; }
+  .store-account-tools .mobile-menu { display: inline-flex; font-size: 21px; }
+  .store-header .project-switch > span:nth-child(2), .search-word { display: none; }
+  .store-primary-nav { order: 3; flex-basis: 100%; justify-content: flex-start; gap: 16px !important; }
+  .store-header .store-primary-nav .nav-item { flex: 1; font-size: 16px; padding: 10px 6px; min-height: 44px; }
+  .store-header .store-work-nav { display: none; }
+  .store-header.open .store-work-nav { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px 12px; padding: 12px var(--page-gutter) 16px; border-top: 1px solid #eee; }
+  .store-header.open .store-work-nav .nav-item { white-space: normal; font-size: 15px; text-align: left; justify-content: flex-start; padding: 10px; }
+  .store-header.open .nav-divider { display: none; }
+  .topbar { min-height: 48px; padding-top: 12px; padding-bottom: 12px; }
+  .workspace { padding-top: 12px; }
+  .page-heading h1 { font-size: 34px; }
+  .page-heading p { font-size: 16px; margin-top: 10px; }
+  .reception-layout { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .reception-brief { position: static; }
+  .reception-brief .field-list { max-height: none; }
+  .advisor-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+  .reception-review { scroll-margin-top: 136px; }
+}
+@media (max-width: 760px) {
+  :root { --page-gutter: 20px; }
+  body { font-size: 16px; }
+  .store-header .brand strong { font-size: 16px; }
+  .store-header .brand small { font-size: 10px; }
+  .store-header .store-primary-nav .nav-item { font-size: 15px; }
+  .store-primary-nav { gap: 4px !important; }
+  .store-header.open .store-work-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .store-header .project-switch > span:last-child { display: none; }
+  .topbar { gap: 12px; }
+  .breadcrumbs, .breadcrumbs strong { font-size: 13px; }
+  .preview-label { font-size: 12px; }
+  .page-heading { gap: 12px; margin-bottom: 22px; }
+  .page-heading h1 { font-size: 30px; line-height: 1.35; letter-spacing: -.02em; }
+  .page-heading p { font-size: 16px; line-height: 1.75; }
+  .page-heading .eyebrow { font-size: 12px; }
+  body[data-view="start"] .page-heading { position: relative; display: block; padding-bottom: 48px; }
+  body[data-view="start"] .page-heading > button { position: absolute; bottom: 0; right: 0; border: 0; background: transparent; padding: 4px 0 4px 12px; min-height: 40px; font-size: 14px; }
+  .reception-chat, .reception-brief, .reception-review { padding: 20px; }
+  .reception-chat-title { gap: 10px; padding-bottom: 14px; flex-wrap: nowrap; }
+  .reception-chat-title .avatar { width: 36px; height: 36px; font-size: 20px; }
+  .reception-chat-title h2 { font-size: 20px; }
+  .reception-chat-title p { font-size: 14px; }
+  .reception-chat-title .pill { display: none; }
+  .reception-messages { padding: 14px 0; gap: 16px; max-height: 340px; }
+  .chat-message { max-width: 100%; }
+  .chat-message p { font-size: 17px; line-height: 1.75; padding: 12px 14px; }
+  .reception-chat form { padding-top: 14px; }
+  .reception-chat textarea { min-height: 96px; font-size: 17px; padding: 12px 14px; }
+  .reception-actions { gap: 10px; }
+  .reception-actions .primary, .reception-actions .secondary { padding: 10px 14px; font-size: 14px; white-space: normal; line-height: 1.65; }
+  .reception-privacy { font-size: 14px; line-height: 1.75; margin-top: 16px; }
+  .reception-fields { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .reception-fields label:last-child { grid-column: auto; }
+  .reception-review h2 { font-size: 26px; }
+  .reception-review > p { font-size: 16px; }
+  .hero.store-hero { padding-top: 40px; padding-bottom: 32px; }
+  .store-hero h1 { font-size: 38px; }
+  .store-hero-copy > p { font-size: 17px; }
+  .section-header h2 { font-size: 26px; }
+  .store-promos { gap: 16px; }
+  .store-advisor.advisor-card { padding: 20px 16px; min-height: 300px; }
+  .store-advisor h3 { font-size: 20px; }
+  .store-advisor > p { font-size: 15px; }
+  .store-footer { gap: 20px; }
+}
+@media (max-width: 480px) {
+  :root { --page-gutter: 16px; }
+  .store-account-tools { gap: 2px; }
+  .store-header .search-button, .store-account-tools .icon-button, .store-account-tools .mobile-menu { min-width: 34px; }
+  .store-header .brand { gap: 8px; }
+  .store-header .brand strong { font-size: 15px; }
+  .store-header .brand small { font-size: 9px; letter-spacing: 1px; }
+  .store-header .brand img { width: 32px; height: 32px; }
+  .store-header .project-switch .avatar { width: 28px; height: 28px; font-size: 14px; }
+  .page-heading h1 { font-size: 28px; }
+  .page-heading p { font-size: 16px; }
+  .reception-chat, .reception-brief, .reception-review { padding: 18px; }
+  .reception-chat-title h2 { font-size: 19px; }
+  .reception-actions > button { flex: 1; }
+  .preview-label { font-size: 12px; }
+  .store-hero h1 { font-size: 34px; }
+  .mini-advisor > strong { font-size: 13px; }
+  .store-advisor > p { font-size: 15px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  button { transition: none; }
+  .display-console { transform: none; }
+  .store-advisor.advisor-card:hover, .store-promo:hover { transform: none; }
+}

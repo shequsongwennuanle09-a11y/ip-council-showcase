@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="从真实的你开始，找到定位、制作内容、用反馈成长。八位AI军师，为当前的你制定下一步。">
+  <meta name="theme-color" content="#ffffff">
+  <title>个人IP打造军师团 · 公开界面展示版</title>
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="showcase.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="bold.css">
+  <link rel="stylesheet" href="store.css">
+  <link rel="stylesheet" href="conversation.css">
+  <link rel="stylesheet" href="polish.css">
+    <link rel="stylesheet" href="warroom.css">
+    <link rel="stylesheet" href="report.css">
+    <link rel="stylesheet" href="upgrades.css">
+</head>
+<body data-view="home">
+  <aside class="showcase-banner" role="note"><strong>公开界面展示版</strong><span>可切换军师、手动建档和记录作品。真实AI与服务器PDF未启用；不发送资料到后台。</span><a href="docs/使用指南.md">可用范围 ↗</a></aside>
+  <a class="skip" href="#workspace">跳到工作区</a>
+  <div class="site-announcement"><span>统一方法，各自成局。让真实的你，被更多人看见。</span><button data-view="start">先聊聊我自己 ›</button></div>
+  <div class="app-shell">
+    <header class="sidebar store-header" id="sidebar" aria-label="主导航">
+      <div class="store-header-inner">
+        <a class="brand" href="#home" data-view="home"><img src="logo.svg" alt="IP军师团标志" width="42" height="42"><span><strong>个人IP打造军师团</strong><small>THE IP COUNCIL</small></span></a>
+        <nav class="navigation store-primary-nav" aria-label="主要功能">
+          <button class="nav-item active" data-view="home">作战室</button>
+          <button class="nav-item" data-view="council">军师会诊</button>
+          <button class="nav-item" data-view="topics">选题工作台</button>
+          <button class="nav-item" data-view="artifacts">成果库</button>
+        </nav>
+        <div class="store-account-tools">
+          <button class="search-button" id="search-button" aria-label="搜索选题与任务帮助"><span aria-hidden="true">⌕</span><span class="search-word">搜索</span></button>
+          <button class="project-switch" id="project-switch"><span class="avatar small current-avatar">我</span><span><strong id="project-name">我的第一个IP</strong><small id="project-meta">本机项目 · 切换 / 新建</small></span><span aria-hidden="true">⌄</span></button>
+          <button class="icon-button" id="settings-button" aria-label="界面设置">⚙</button>
+          <button class="mobile-menu" id="menu-button" aria-label="展开全部导航" aria-expanded="false">☰</button>
+        </div>
+      </div>
+      <nav class="navigation store-work-nav" aria-label="创作与方法导航">
+        <button class="nav-item" data-view="start">对话起步</button>
+        <button class="nav-item" data-view="canvas">我的IP档案</button>
+        <button class="nav-item" data-view="script">表达工坊</button>
+        <button class="nav-item" data-view="shoot">发布审校</button>
+        <button class="nav-item" data-view="growth">复盘手账</button>
+        <button class="nav-item upgrade-nav-item" data-view="diagnosis" data-upgrade-view="diagnosis">总军师诊断</button>
+        <button class="nav-item upgrade-nav-item" data-view="studio" data-upgrade-view="studio">作品工作台</button>
+        <button class="nav-item upgrade-nav-item" data-view="reviews" data-upgrade-view="reviews">作品级复盘</button>
+        <span class="nav-divider" aria-hidden="true"></span>
+        <button class="nav-item" data-view="guide">定位三步走</button>
+        <button class="nav-item" data-view="manual">使用指南</button>
+        <button class="nav-item" data-view="library">任务帮助</button>
+      </nav>
+    </header>
+    <div class="main-shell">
+      <div class="topbar">
+        <div class="breadcrumbs"><span>我的工作台</span><span class="slash">/</span><strong id="breadcrumb">作战室</strong></div>
+        <span class="preview-label" id="api-status"><i></i>公开展示版 · AI未启用</span>
+      </div>
+      <main id="workspace" class="workspace" tabindex="-1"></main>
+      <footer class="main-footer store-footer"><div><strong>个人IP打造军师团</strong><p>不是替你成为别人，是让真实的你被看见。</p></div><div><span>以真实为支点，以内容建立信任。</span><span>公开展示版 · 资料只在当前浏览器保存</span><span>AI建议需核实 · 最终决定由你确认</span></div></footer>
+    </div>
+  </div>
+  <dialog id="detail-dialog" class="detail-dialog" aria-labelledby="dialog-title"><div class="dialog-header"><span class="eyebrow" id="dialog-kicker">军师团</span><button class="icon-button" id="dialog-close" aria-label="关闭详情">×</button></div><div id="dialog-content"></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="data.js"></script>
+  <script src="vendor/marked.js"></script>
+  <script src="vendor/purify.min.js"></script>
+  <script src="app.js"></script>
+  <script src="upgrades.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+/* 对话起步八视角；沿用白卡、灰底和信号橙，不引入另一套主题。 */
+.onboard-warroom { padding: 28px; margin-bottom: 24px; }
+.warroom-heading { display:flex; justify-content:space-between; align-items:center; gap:20px; margin-bottom:24px; }
+.warroom-heading h2 { margin:6px 0 8px; font-size:26px; line-height:1.4; }
+.warroom-heading p { color:#646464; font-size:16px; line-height:1.75; }
+.warroom-heading .eyebrow { font-size:12px; color:#646464; letter-spacing:.08em; }
+.onboard-role-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }
+.onboard-role-grid button { min-width:0; display:grid; grid-template-columns:36px minmax(0,1fr); column-gap:12px; align-items:center; text-align:left; padding:16px; border:1px solid #e6e6e6; border-radius:10px; background:#fafafa; color:#191919; min-height:90px; }
+.onboard-role-grid button:hover { border-color:#bcbcbc; background:#f5f5f5; }
+.onboard-role-grid button[aria-pressed="true"] { border-color:#ff6900; background:#fff3e9; box-shadow:inset 0 0 0 1px #ff6900; }
+.onboard-role-grid .role-mark { grid-row:1 / 3; width:36px; height:36px; background:#fff; border:1px solid #ececec; border-radius:9px; display:grid; place-items:center; font-size:21px; font-weight:600; }
+.onboard-role-grid button[aria-pressed="true"] .role-mark { color:#a74100; border-color:#ffd7ba; }
+.onboard-role-grid strong { font-size:16px; line-height:1.55; font-weight:600; }
+.onboard-role-grid small { font-size:13px; line-height:1.7; color:#646464; margin-top:2px; }
+.onboard-role-grid button:disabled { opacity:.6; cursor:wait; }
+.role-context { border-top:1px solid #ececec; margin-top:20px; padding-top:16px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+.role-context strong { font-size:16px; font-weight:550; }
+.role-context span { font-size:14px; line-height:1.7; color:#646464; }
+@media (max-width:1000px) { .warroom-heading { align-items:flex-start; } .onboard-role-grid button { grid-template-columns:minmax(0,1fr); } .onboard-role-grid .role-mark { display:none; } }
+@media (max-width:600px) { .onboard-warroom { padding:20px; } .warroom-heading { display:block; margin-bottom:18px; } .warroom-heading h2 { font-size:24px; } .warroom-heading .pill { margin-top:12px; display:inline-flex; } .onboard-role-grid { gap:10px; } .onboard-role-grid button { padding:12px; grid-template-columns:28px minmax(0,1fr); column-gap:8px; } .onboard-role-grid .role-mark { width:28px; height:32px; font-size:18px; } .onboard-role-grid strong { font-size:15px; } .onboard-role-grid small { font-size:13px; } }
+@media (max-width:380px) { .onboard-role-grid button { grid-template-columns:minmax(0,1fr); } .onboard-role-grid .role-mark { display:none; } }
+@media (max-width:600px) { .onboard-role-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .onboard-role-grid .role-mark { display:grid; } }

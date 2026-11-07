@@ -1,0 +1,143 @@
+/* v3 P0：诊断卡、作品工作包与作品级复盘 */
+.upgrade-heading { align-items: flex-start; }
+.upgrade-heading > button, .upgrade-heading > .upgrade-actions-inline { margin-top: 12px; }
+.upgrade-actions-inline { display: inline-flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+.upgrade-diagnosis-grid, .upgrade-review-grid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(300px, .65fr); gap: 24px; align-items: start; }
+.upgrade-diagnosis-aside, .upgrade-review-aside { display: grid; gap: 18px; }
+.upgrade-form, .upgrade-section { padding: 28px; }
+.upgrade-form-header, .upgrade-card-top, .upgrade-workbar, .upgrade-section-title, .upgrade-form-actions, .upgrade-summary-list > div { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; }
+.upgrade-form-header h2, .upgrade-card-top h2, .upgrade-section-title h2, .upgrade-workbar h2 { margin: 5px 0 0; font-size: 24px; line-height: 1.4; }
+.upgrade-form-header h2 { font-size: 22px; }
+.upgrade-section-title { display: block; margin-bottom: 22px; }
+.upgrade-section-title p { max-width: 700px; margin-top: 8px; color: #646464; font-size: 15px; }
+.upgrade-field { display: grid; gap: 7px; margin-top: 18px; }
+.upgrade-field > span { color: #3b3b3b; font-size: 15px; font-weight: 600; }
+.upgrade-field input, .upgrade-field select, .upgrade-field textarea { width: 100%; min-height: 46px; padding: 10px 13px; border: 1px solid #d9d9d9; border-radius: 8px; background: #fafafa; color: #252525; font: inherit; line-height: 1.65; }
+.upgrade-field textarea { min-height: 108px; resize: vertical; }
+.upgrade-field input:focus, .upgrade-field select:focus, .upgrade-field textarea:focus { border-color: #a74100; outline: 2px solid #ff690026; }
+.upgrade-fields-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 22px; }
+.upgrade-fields-grid .upgrade-area { grid-column: span 1; }
+.upgrade-experience-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; }
+.upgrade-experience-grid .upgrade-field textarea { min-height: 160px; }
+.upgrade-form-actions { align-items: center; margin-top: 26px; padding-top: 22px; border-top: 1px solid #ececec; }
+.upgrade-form-actions small, .upgrade-muted { color: #707070; font-size: 14px; line-height: 1.75; }
+.upgrade-card-top { padding-bottom: 22px; border-bottom: 1px solid #ececec; }
+.upgrade-diagnostic-card { margin: 0 0 24px; padding: 26px; border-radius: 14px; background: #191919; color: #fff; box-shadow: 0 8px 28px #00000010; }
+.upgrade-diagnostic-card .eyebrow, .upgrade-diagnostic-card .upgrade-diagnostic-mini span { color: #c9c9c9; }
+.upgrade-diagnostic-card h2 { margin: 8px 0 0; font-size: clamp(23px, 2.5vw, 34px); line-height: 1.35; font-weight: 650; }
+.upgrade-diagnostic-card .pill { flex: none; }
+.upgrade-diagnostic-route { display: flex; align-items: center; gap: 14px; margin: 28px 0 18px; padding: 15px 16px; border: 1px solid #ffffff26; background: #ffffff0d; }
+.upgrade-route-number { display: inline-grid; place-items: center; width: 44px; height: 44px; color: #191919; background: #ff6900; font-weight: 700; font-size: 18px; }
+.upgrade-diagnostic-route strong, .upgrade-diagnostic-route small { display: block; }
+.upgrade-diagnostic-route small { margin-top: 2px; color: #c8c8c8; font-size: 13px; }
+.upgrade-route-arrow { margin-left: auto; color: #ff9a55; font-size: 24px; }
+.upgrade-diagnostic-mini { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-bottom: 22px; }
+.upgrade-diagnostic-mini div { padding: 12px 14px; border-top: 1px solid #ffffff26; }
+.upgrade-diagnostic-mini span, .upgrade-diagnostic-mini strong { display: block; }
+.upgrade-diagnostic-mini strong { margin-top: 6px; color: #fff; font-size: 15px; font-weight: 500; }
+.upgrade-diagnostic-card .primary { background: #fff; color: #191919; border-color: #fff; }
+.upgrade-diagnostic-card .primary:hover { background: #ffefe6; border-color: #ffefe6; }
+.upgrade-route-card, .upgrade-principle-card { padding: 24px; }
+.upgrade-route-emphasis { display: flex; gap: 14px; align-items: center; margin: 20px 0; padding: 14px; background: #fff3e9; }
+.upgrade-route-emphasis > span { display: grid; place-items: center; width: 40px; height: 40px; color: #fff; background: #191919; font-weight: 700; }
+.upgrade-route-emphasis strong { display: block; }
+.upgrade-route-emphasis p { margin-top: 3px; color: #646464; font-size: 14px; }
+.upgrade-principle-card h3 { margin-top: 10px; font-size: 20px; line-height: 1.5; }
+.upgrade-principle-card ul { margin: 16px 0 0; padding-left: 20px; color: #646464; }
+.upgrade-principle-card li { margin-top: 8px; font-size: 15px; }
+.upgrade-workbar { align-items: center; margin-bottom: 18px; padding: 20px 22px; border: 1px solid #e7e7e7; background: #fff; }
+.upgrade-workbar h2 small { color: #707070; font-size: 14px; font-weight: 400; }
+.upgrade-progress { min-width: 180px; text-align: right; }
+.upgrade-progress strong { font-size: 24px; }
+.upgrade-progress span { display: block; color: #707070; font-size: 13px; }
+.upgrade-progress > div { width: 180px; height: 5px; margin-top: 8px; overflow: hidden; background: #ececec; }
+.upgrade-progress i { display: block; height: 100%; background: #ff6900; }
+.upgrade-workbar-actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+.upgrade-work-tabs { display: flex; gap: 10px; margin: 0 0 24px; overflow-x: auto; padding-bottom: 4px; }
+.upgrade-work-tab { min-width: 180px; padding: 13px 15px; text-align: left; border: 1px solid #dedede; background: #fff; color: #242424; border-radius: 10px; }
+.upgrade-work-tab:hover { border-color: #a74100; }
+.upgrade-work-tab.active { border-color: #191919; box-shadow: inset 0 -3px #ff6900; }
+.upgrade-work-tab span, .upgrade-work-tab small, .upgrade-work-tab strong { display: block; }
+.upgrade-work-tab span { color: #a74100; font-size: 12px; font-weight: 600; }
+.upgrade-work-tab strong { margin-top: 4px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 15px; }
+.upgrade-work-tab small { margin-top: 4px; color: #707070; font-size: 13px; }
+.upgrade-empty-inline { margin-bottom: 24px; padding: 18px; border: 1px dashed #cfcfcf; background: #fff; color: #646464; }
+.upgrade-section { margin-top: 18px; }
+.upgrade-section:first-of-type { margin-top: 0; }
+.upgrade-section .notice { margin-top: 18px; }
+.upgrade-checklist { display: grid; gap: 10px; margin-top: 18px; }
+.upgrade-check { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px 11px; align-items: center; padding: 13px 14px; border: 1px solid #e6e6e6; background: #fafafa; cursor: pointer; }
+.upgrade-check:hover { border-color: #d1b4a2; background: #fffaf7; }
+.upgrade-check input { width: 18px; height: 18px; grid-row: span 2; accent-color: #ff6900; }
+.upgrade-check span { font-size: 15px; font-weight: 600; }
+.upgrade-check small { color: #707070; font-size: 13px; line-height: 1.55; }
+.upgrade-review-title { margin: 28px 0 4px; padding-top: 24px; border-top: 1px solid #ececec; }
+.upgrade-review-aside { position: sticky; top: 148px; }
+.upgrade-review-aside > .panel { padding: 24px; }
+.upgrade-review-aside h3 { margin: 9px 0; font-size: 20px; line-height: 1.5; }
+.upgrade-review-aside p { color: #646464; font-size: 15px; }
+.upgrade-summary-list { display: grid; gap: 0; margin-top: 20px; border-top: 1px solid #ececec; }
+.upgrade-summary-list > div { padding: 12px 0; border-bottom: 1px solid #ececec; }
+.upgrade-summary-list span { color: #707070; font-size: 13px; }
+.upgrade-summary-list strong { max-width: 62%; text-align: right; font-size: 14px; font-weight: 550; }
+.upgrade-history { display: grid; gap: 14px; margin: 18px 0 0; padding-left: 20px; }
+.upgrade-history li { padding-left: 4px; }
+.upgrade-history strong, .upgrade-history span { display: block; }
+.upgrade-history strong { font-size: 15px; }
+.upgrade-history span { color: #707070; font-size: 13px; }
+.upgrade-history p { margin-top: 4px; font-size: 14px; }
+.upgrade-launchpad { margin: 30px 0 36px; padding: 24px; border: 1px solid #e6e0db; background: #fffaf7; }
+.upgrade-launchpad-head { display: flex; justify-content: space-between; gap: 20px; align-items: flex-start; }
+.upgrade-launchpad h2 { margin-top: 7px; font-size: 26px; line-height: 1.4; }
+.upgrade-launchpad p { margin-top: 6px; color: #646464; font-size: 15px; }
+.upgrade-launchpad-stamp { color: #a74100; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 38px; font-weight: 700; letter-spacing: .08em; }
+.upgrade-launchpad-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 22px; }
+.upgrade-launch-card { display: flex; flex-direction: column; align-items: flex-start; min-height: 166px; padding: 17px; text-align: left; border: 1px solid #e6d7ce; background: #fff; color: #191919; }
+.upgrade-launch-card:hover { border-color: #a74100; transform: translateY(-2px); }
+.upgrade-launch-card > span { color: #a74100; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; }
+.upgrade-launch-card strong { margin-top: 14px; font-size: 17px; }
+.upgrade-launch-card small { margin-top: 5px; color: #646464; font-size: 14px; line-height: 1.65; }
+.upgrade-launch-card b { margin-top: auto; padding-top: 14px; color: #a74100; font-size: 14px; font-weight: 600; }
+.upgrade-report-summary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 20px 0; }
+.upgrade-report-summary div { padding: 12px; background: #fafafa; border: 1px solid #ececec; }
+.upgrade-report-summary span, .upgrade-report-summary strong { display: block; }
+.upgrade-report-summary span { color: #707070; font-size: 12px; }
+.upgrade-report-summary strong { margin-top: 5px; font-size: 14px; }
+.upgrade-report-error { min-height: 24px; color: #a22f1e; font-size: 14px; }
+@media (max-width: 980px) {
+  .upgrade-diagnosis-grid, .upgrade-review-grid { grid-template-columns: minmax(0, 1fr); }
+  .upgrade-review-aside { position: static; }
+  .upgrade-experience-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .upgrade-launchpad-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 700px) {
+  .upgrade-form, .upgrade-section, .upgrade-diagnostic-card { padding: 20px; }
+  .upgrade-fields-grid, .upgrade-diagnostic-mini, .upgrade-report-summary { grid-template-columns: minmax(0, 1fr); }
+  .upgrade-experience-grid { grid-template-columns: minmax(0, 1fr); }
+  .upgrade-form-actions, .upgrade-workbar, .upgrade-card-top { display: block; }
+  .upgrade-form-actions .primary, .upgrade-workbar-actions { margin-top: 14px; }
+  .upgrade-progress { margin-top: 16px; text-align: left; }
+  .upgrade-progress > div { width: 100%; }
+  .upgrade-launchpad { padding: 20px; }
+  .upgrade-launchpad h2 { font-size: 22px; }
+  .upgrade-launchpad-stamp { font-size: 28px; }
+}
+@media (prefers-reduced-motion: reduce) { .upgrade-launch-card:hover { transform: none; } }
+
+
+/* v3 workflow continuation */
+.upgrade-stagebar{display:flex;align-items:center;justify-content:space-between;gap:18px;margin:0 0 24px;padding:12px 14px;border:1px solid var(--line,#e5e5e5);background:rgba(255,255,255,.74);border-radius:14px;box-shadow:0 10px 30px rgba(20,20,20,.04)}
+.upgrade-stage-items{display:flex;align-items:center;gap:9px;min-width:0}
+.upgrade-stage-items>i{color:#b6b6b6;font-style:normal;font-size:13px}
+.upgrade-stage{display:inline-flex;align-items:center;gap:7px;padding:7px 9px;border:0;background:transparent;color:#8a8a8a;font:inherit;white-space:nowrap;cursor:pointer;border-radius:9px}
+.upgrade-stage b{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#f0f0f0;color:#777;font-size:11px}
+.upgrade-stage span{font-size:12px}
+.upgrade-stage.is-active{background:#fff1e8;color:#1a1a1a}
+.upgrade-stage.is-active b{background:#f26b2b;color:#fff}
+.upgrade-stage.is-done{color:#555}
+.upgrade-stage.is-done b{background:#e7f4eb;color:#2c8851}
+.upgrade-next{display:flex;align-items:center;gap:10px;flex:0 0 auto;padding:8px 12px;border:1px solid #1e1e1e;border-radius:9px;background:#1e1e1e;color:#fff;font:inherit;text-align:left;cursor:pointer}
+.upgrade-next span{display:block;color:#ffb08a;font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+.upgrade-next strong{font-size:12px;font-weight:650;white-space:nowrap}
+.upgrade-stage:focus-visible,.upgrade-next:focus-visible{outline:3px solid rgba(242,107,43,.3);outline-offset:2px}
+@media(max-width:720px){.upgrade-stagebar{display:block;padding:10px;margin-bottom:18px}.upgrade-stage-items{overflow:auto;padding-bottom:9px;scrollbar-width:none}.upgrade-stage-items::-webkit-scrollbar{display:none}.upgrade-stage{padding:6px 7px}.upgrade-stage span{font-size:11px}.upgrade-next{width:100%;justify-content:space-between;padding:10px 12px}.upgrade-next strong{font-size:13px}}

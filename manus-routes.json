@@ -1,0 +1,64 @@
+{
+  "routes": [
+    {
+      "path": "/",
+      "title": "作战室"
+    },
+    {
+      "path": "/#council",
+      "title": "通用AI军师会诊"
+    },
+    {
+      "path": "/#canvas",
+      "title": "三步个人建档"
+    },
+    {
+      "path": "/#topics",
+      "title": "选题工作台"
+    },
+    {
+      "path": "/#script",
+      "title": "表达工坊"
+    },
+    {
+      "path": "/#shoot",
+      "title": "发布审校"
+    },
+    {
+      "path": "/#growth",
+      "title": "复盘手账"
+    },
+    {
+      "path": "/#diagnosis",
+      "title": "总军师诊断卡"
+    },
+    {
+      "path": "/#studio",
+      "title": "作品设计与拍摄工作台"
+    },
+    {
+      "path": "/#reviews",
+      "title": "作品级复盘"
+    },
+    {
+      "path": "/#library",
+      "title": "任务帮助"
+    },
+    {
+      "path": "/#guide",
+      "title": "通用定位三步走"
+    },
+    {
+      "path": "/#manual",
+      "title": "使用指南"
+    },
+    {
+      "path": "/#artifacts",
+      "title": "项目成果库"
+    },
+    {
+      "path": "/#start",
+      "title": "对话起步"
+    }
+  ]
+}
